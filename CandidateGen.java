@@ -17,15 +17,15 @@ public static void CandGen()
 	{
 		//HashMap map = new HashMap(); 
 		try {
-			String dataset = "D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Datasets\\D2.txt";//determines name of file
+			String dataset = "dataset.txt";//determines name of file
 		    callcount = callcount +1;
 		    
 		    if(callcount == 1)
 		    {
 	    	HashMap map = new HashMap();
-	    	FileWriter Ck = new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\C"+callcount+".txt");
-	    	FileWriter Infeq = new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\Infrequent.txt");
-			FileWriter Feq = new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\Frequent.txt");
+	    	FileWriter Ck = new FileWriter("C"+callcount+".txt");
+	    	FileWriter Infeq = new FileWriter("Infrequent.txt");
+			FileWriter Feq = new FileWriter("Frequent.txt");
 		    
 	    	Scanner list = new Scanner(new File(dataset));
 		    while (list.hasNext()) {
@@ -67,8 +67,8 @@ public static void CandGen()
 		} 
 		/// 2-itemset
 		    else if(callcount == 2){ // Write Ck
-		    	String Lk = "D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\L"+(callcount-1)+".txt";
-		    	FileWriter Ck = new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\C"+callcount+".txt");
+		    	String Lk = "L"+(callcount-1)+".txt";
+		    	FileWriter Ck = new FileWriter("C"+callcount+".txt");
 		    	HashMap map = new HashMap();
 		    	Scanner list = new Scanner(new File(Lk));
 		    	list.nextLine();
@@ -108,8 +108,8 @@ public static void CandGen()
 		    
 	/// 3-itemset
 		    else if(callcount >2){
-		    String Lk = "D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\L"+(callcount-1)+".txt";
-	    	FileWriter Ck = new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\C"+callcount+".txt");
+		    String Lk = "L"+(callcount-1)+".txt";
+	    	FileWriter Ck = new FileWriter("C"+callcount+".txt");
 	    	Scanner list = new Scanner(new File(Lk));
 	    	Scanner list2 = new Scanner(new File(Lk));
 	    	list.nextLine();
@@ -235,10 +235,10 @@ private static void countfre(int filenumber) throws IOException{
 	ArrayList<String> ckwords = new ArrayList<String>();
 	ArrayList<String> dbwords = new ArrayList<String>();
 	 
-	File ck = new File("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\C2.txt");
+	File ck = new File("C2.txt");
 	 Scanner ckscan = new Scanner(ck);//.useDelimiter(":");
 	 
-	 File dataset = new File("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Datasets\\D2.txt");
+	 File dataset = new File("dataset.txt");
      Scanner dbscan = new Scanner(dataset).useDelimiter("\n");
      
      int j1,i1 =0;

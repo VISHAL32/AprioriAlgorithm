@@ -15,16 +15,16 @@ public class SupportCounter{
 	public static void SupCoun()
 	{
 	//	HashMap map = new HashMap(); 
-	//	String dataset = "D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Datasets\\dataset1.txt";//determines name of file
+	//	String dataset = "dataset.txt";//determines name of file
 		try {
 			callcount = callcount +1;
 			
 			if(callcount ==1){
 			
 				HashMap map = new HashMap(); 
-			String dataset = "D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Datasets\\D2.txt";//determines name of file
+			String dataset = "Dataset.txt";//determines name of file
 		//	callcount = callcount +1;
-		    FileWriter Lk = new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\L"+callcount+".txt");
+		    FileWriter Lk = new FileWriter("L"+callcount+".txt");
 		    Scanner list = new Scanner(new File(dataset));
 
 		    
@@ -72,11 +72,11 @@ private static void countfre(int filenumber) throws IOException{
 		
 		ArrayList<String> ckwords = new ArrayList<String>();
 		ArrayList<String> dbwords = new ArrayList<String>();
-		FileWriter Lk = new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\L"+filenumber+".txt");
-		File ck = new File("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\C"+filenumber+".txt");
+		FileWriter Lk = new FileWriter("L"+filenumber+".txt");
+		File ck = new File("C"+filenumber+".txt");
 		Scanner ckscan = new Scanner(ck);//.useDelimiter(":");
 		 
-		 File dataset = new File("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Datasets\\D2.txt");
+		 File dataset = new File("Dataset.txt");
 	     Scanner dbscan = new Scanner(dataset).useDelimiter("\n");
 	     
 	     int j1,i1 =0;

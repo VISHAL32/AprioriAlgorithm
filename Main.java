@@ -20,9 +20,9 @@ public class Main {
 	public static int minSup = 3;
 	
 	public static void main(String args[]) throws IOException {
-	FileWriter summary= new FileWriter("D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\Summary.txt");
-	String Freqitems = "D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\Frequent.txt";
-	String Infreqitems = "D:\\CU DENVER\\4th Semester\\Data Mining and Analytics\\Assignmentss\\Assignment 3\\A3\\Package\\Output\\A\\dataset1\\Infrequent.txt";
+	FileWriter summary= new FileWriter("Summary.txt");
+	String Freqitems = "Frequent.txt";
+	String Infreqitems = "Infrequent.txt";
 	long startTime = System.nanoTime();
 	do{
 		CandidateGen.CandGen();
